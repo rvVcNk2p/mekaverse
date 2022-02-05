@@ -68,6 +68,9 @@ export default class ParalaxVideo extends Vue {
 <style lang="scss">
 #paralax-video {
   height: 100%;
+  @media only screen and (max-width: 780px) {
+    display: none;
+  }
 }
 
 #hero-video {

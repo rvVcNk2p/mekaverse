@@ -61,7 +61,10 @@ export default class About extends Vue {}
     padding: 0 0 0 0;
 
     @media only screen and (max-width: 780px) {
-      height: 100vh;
+      height: 750px;
+      background: url('https://www.themekaverse.com/images/hero.jpg') no-repeat;
+      background-size: cover;
+      background-position: bottom;
     }
 
     @media only screen and (max-width: 500px) {

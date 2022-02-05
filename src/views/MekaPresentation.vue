@@ -54,7 +54,7 @@ export default class MekaPresentation extends Vue {}
   }
 
   @media only screen and (max-width: 780px) {
-    margin: rem(100) 0 rem(70);
+    margin: rem(50) 0 rem(70);
     margin-bottom: 0px;
     padding: 0px rem(30);
     padding-bottom: rem(150);
