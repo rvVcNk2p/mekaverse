@@ -19,7 +19,9 @@ export default class MekaSvgButton extends Vue {
   readonly svgName: string;
 
   get svgSrc(): string {
-    return `./src/assets/images/${this.svgName}.svg`;
+    if (this.svgName === 'twitter') {
+      return `https://www.themekaverse.com/images/twitter.svg`;
+    } else return `https://www.themekaverse.com/images/twitter.svg`;
   }
 }
 </script>
