@@ -14,7 +14,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-/** ParalaxVideo Component */
+/** MekaParalaxVideo Component */
 export default class ParalaxVideo extends Vue {
   translateY: Number = 0;
   currentTime: Number = 0;
@@ -23,10 +23,6 @@ export default class ParalaxVideo extends Vue {
 
   setTranslateY(): void {
     this.translateY = window.scrollY / 2;
-  }
-  setCurrentTime(time: number): void {
-    console.log('setCurrentTime: ', time);
-    this.video.currentTime = time;
   }
 
   handleVideoScroll = (bound, video) => {
@@ -46,20 +42,21 @@ export default class ParalaxVideo extends Vue {
         this.setTranslateY();
 
         video.currentTime = video.duration * percentScrolled;
-        // this.setCurrentTime(video.duration * percentScrolled);
       }
-      // requestAnimationFrame(scrollVideo);
     };
-    // requestAnimationFrame(scrollVideo);
     scrollVideo();
   };
 
   mounted(): void {
-    window.addEventListener('scroll', this._onScroll);
+    if (window.innerWidth > 780) {
+      window.addEventListener('scroll', this._onScroll);
+    }
   }
 
   beforeDestroy(): void {
-    window.removeEventListener('scroll', this._onScroll);
+    if (window.innerWidth > 780) {
+      window.removeEventListener('scroll', this._onScroll);
+    }
   }
 
   _onScroll(): void {
@@ -71,7 +68,6 @@ export default class ParalaxVideo extends Vue {
 <style lang="scss">
 #paralax-video {
   height: 100%;
-  // height: 1500px;
 }
 
 #hero-video {

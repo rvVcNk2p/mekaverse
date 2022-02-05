@@ -80,6 +80,10 @@ export default class MekaPresentation extends Vue {}
       color: white;
       margin-bottom: 0;
 
+      @media only screen and (max-width: 1200px) {
+        font-size: rem(38);
+      }
+
       &--colorized {
         background: linear-gradient(90deg, #d02561, #ff79a8);
         -webkit-background-clip: text;

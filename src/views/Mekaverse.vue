@@ -22,7 +22,7 @@
         <div class="mekaverse-main-hero__btn-container">View on Opensea</div>
       </a>
 
-      <paralax-video />
+      <meka-paralax-video />
     </section>
 
     <meka-presentation />
@@ -31,14 +31,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import ParalaxVideo from './ParalaxVideo.vue';
+import MekaParalaxVideo from './MekaParalaxVideo.vue';
 import MekaPresentation from './MekaPresentation.vue';
 import SocialNav from '../components/SocialNav.vue';
 import MekaTextButton from '../components/utils/MekaTextButton.vue';
 
 @Component({
   components: {
-    ParalaxVideo,
+    MekaParalaxVideo,
     MekaPresentation,
     SocialNav,
     MekaTextButton,
@@ -49,68 +49,73 @@ export default class About extends Vue {}
 </script>
 
 <style lang="scss">
-.mekaverse-main-hero {
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
-  width: 100%;
-  height: 90vh;
-  padding: 0 0 0 0;
-
-  @media only screen and (max-width: 780px) {
-    height: 100vh;
-  }
-
+.mekaverse-main {
   @media only screen and (max-width: 500px) {
-    height: rem(500);
+    width: 100vw;
   }
+  &-hero {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    width: 100%;
+    height: 90vh;
+    padding: 0 0 0 0;
 
-  header {
-    position: absolute;
-    top: rem(60);
-    left: 0;
-    right: 0;
-    z-index: 2;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  &__btn {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-size: rem(20);
-    line-height: rem(30);
-    text-align: center;
-    text-decoration: none;
-    font-family: $global__font-family;
-
-    @media only screen and (max-width: 960px) {
-      min-width: 70%;
+    @media only screen and (max-width: 780px) {
+      height: 100vh;
     }
-    @media only screen and (max-width: 670px) {
-      min-width: 90%;
-    }
+
     @media only screen and (max-width: 500px) {
-      top: 75%;
-      font-size: rem(18);
-      line-height: rem(25);
-      padding: rem(15) rem(30);
+      height: rem(500);
     }
 
-    &-container {
-      background: #4753d6;
-      padding: rem(25) rem(50);
-      transition: all 0.3s ease-in-out;
-      color: #fff;
-      cursor: pointer;
-      font-weight: 700;
+    header {
+      position: absolute;
+      top: rem(60);
+      left: 0;
+      right: 0;
+      z-index: 2;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+    }
 
-      &:hover {
-        background: #6c77ea;
+    &__btn {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      font-size: rem(20);
+      line-height: rem(30);
+      text-align: center;
+      text-decoration: none;
+      font-family: $global__font-family;
+
+      @media only screen and (max-width: 960px) {
+        min-width: 70%;
+      }
+      @media only screen and (max-width: 670px) {
+        min-width: 90%;
+      }
+      @media only screen and (max-width: 500px) {
+        top: 75%;
+        font-size: rem(18);
+        line-height: rem(25);
+        padding: rem(15) rem(30);
+      }
+
+      &-container {
+        background: #4753d6;
+        padding: rem(25) rem(50);
+        transition: all 0.3s ease-in-out;
         color: #fff;
+        cursor: pointer;
+        font-weight: 700;
+
+        &:hover {
+          background: #6c77ea;
+          color: #fff;
+        }
       }
     }
   }
