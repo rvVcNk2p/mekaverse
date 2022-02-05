@@ -1,15 +1,8 @@
 <template>
   <div class="mekaverse-button">
-    <a
-      :href="href"
-      name="twitternav"
-      rel="noopener"
-      target="_blank"
-      class="mekaverse-button__link row"
-      :style="{
-        'webkit-mask': `url('./src/assets/images/${svgName}.svg') no-repeat center`,
-      }"
-    />
+    <a :href="href" rel="noopener" target="_blank">
+      <img class="mekaverse-button__link row" :src="svgSrc" :alt="svgName" />
+    </a>
   </div>
 </template>
 
@@ -24,6 +17,10 @@ export default class MekaSvgButton extends Vue {
 
   @Prop()
   readonly svgName: string;
+
+  get svgSrc(): string {
+    return `./src/assets/images/${this.svgName}.svg`;
+  }
 }
 </script>
 
@@ -35,18 +32,20 @@ export default class MekaSvgButton extends Vue {
   margin-right: 15px;
   box-shadow: inset 0 0 0 #fff;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     box-shadow: inset 0 -54px 0 #fff;
   }
 
   &__link {
-    width: rem(44);
-    height: rem(44);
+    width: rem(18);
+    height: rem(18);
     display: block;
     justify-content: center;
     align-items: center;
-    background-color: #01030d;
   }
 }
 </style>
