@@ -47,7 +47,6 @@ export default class MekaPresentation extends Vue {}
   margin: 0 auto;
   margin-top: rem(100);
   padding: 0 rem(60);
-  padding-bottom: rem(100);
 
   @media only screen and (max-width: 960px) {
     flex-direction: column;
