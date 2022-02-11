@@ -26,8 +26,8 @@
     </section>
 
     <meka-presentation />
-
     <meka-carausel />
+    <meka-roadmap />
   </section>
 </template>
 
@@ -36,6 +36,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import MekaParalaxVideo from './MekaParalaxVideo.vue';
 import MekaPresentation from './MekaPresentation.vue';
 import MekaCarausel from './MekaCarausel.vue';
+import MekaRoadmap from './MekaRoadmap.vue';
 
 import SocialNav from '../components/SocialNav.vue';
 import MekaTextButton from '../components/utils/MekaTextButton.vue';
@@ -47,6 +48,7 @@ import MekaTextButton from '../components/utils/MekaTextButton.vue';
     MekaCarausel,
     SocialNav,
     MekaTextButton,
+    MekaRoadmap,
   },
 })
 /** About Component */
