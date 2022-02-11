@@ -61,6 +61,10 @@ export default class MekaPresentation extends Vue {
   height: 200vh;
   width: 100vw;
 
+  @media only screen and (max-width: 780px) {
+    display: none;
+  }
+
   #roadmap-video {
     max-width: 80%;
   }
