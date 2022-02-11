@@ -1,7 +1,7 @@
 <template>
   <section
     class="meka-carausel js-flickity"
-    data-flickity='{ "wrapAround": true, "autoPlay": 2500, "prevNextButtons": false }'
+    data-flickity='{ "wrapAround": true, "autoPlay": 2500, "prevNextButtons": false, "imagesLoaded": true }'
   >
     <div v-for="id in carauselImages" :key="id" class="meka-carausel__item">
       <img :src="'/meka_' + id + '.jpeg'" class="meka-carausel__item__img" />
