@@ -27,16 +27,6 @@ export default class MekaCarausel extends Vue {
 
     Vue.set(this, 'carauselImages', [...Array(9).keys()]);
   }
-
-  styleObject = (url): any => {
-    console.log(url);
-    return {
-      backgroundImage: `url(${url})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: '50% 50%',
-    };
-  };
 }
 </script>
 
@@ -44,16 +34,17 @@ export default class MekaCarausel extends Vue {
 .meka-carausel {
   color: $global__color--white;
   background: $global__color--black;
-  padding: 100px 0;
+  padding: rem(100) 0;
 
   @media only screen and (max-width: 780px) {
-    padding: 50px 0;
+    padding: rem(50) 0;
+    padding-bottom: rem(150);
   }
 
   .meka-carausel__item {
-    width: 40vw;
-    max-width: 500px;
-    margin-right: 35px;
+    width: 50vw;
+    max-width: rem(500);
+    margin-right: rem(35);
 
     .meka-carausel__item__img {
       width: 100%;
@@ -71,13 +62,22 @@ export default class MekaCarausel extends Vue {
 
   .flickity-page-dots {
     position: relative;
-    margin-top: 10px;
+    margin-top: rem(10);
 
     .dot {
-      width: 30px;
-      border-radius: 10px;
-      height: 5px;
+      width: rem(30);
+      border-radius: 0;
+      height: rem(3);
       opacity: 0.5;
+      background: $global__color--make-blue;
+
+      @media only screen and (max-width: 780px) {
+        width: rem(20);
+      }
+
+      &.is-selected {
+        background: $global__color--white;
+      }
     }
   }
 }
