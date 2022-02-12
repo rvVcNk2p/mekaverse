@@ -17,10 +17,7 @@
     </div>
     <div class="left-section">
       <video class="various" playsinline autoplay muted loop>
-        <source
-          src="https://www.themekaverse.com/images/various.mp4"
-          type="video/mp4"
-        />
+        <source src="/various.mp4" type="video/mp4" />
       </video>
     </div>
   </section>
