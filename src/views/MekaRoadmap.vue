@@ -128,10 +128,10 @@ export default class MekaPresentation extends Vue {
     if (top < 0 && top > -1 * height) {
       const percentage = (-1 * top * 100) / height;
 
-      if (top * -1 < height / 2) {
+      if (top * -1 < height / 1.3) {
         this.setTranslateY(-1 * top);
 
-        const videoPercentage = ((percentage * video.duration) / 100) * 2;
+        const videoPercentage = ((percentage * video.duration) / 100) * 1.3;
         video.currentTime = videoPercentage;
       }
     }
