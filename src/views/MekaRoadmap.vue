@@ -1,6 +1,5 @@
 <template>
   <section class="meka-roadmap">
-    <!-- style="transform: translateY(1573px)" -->
     <video
       id="roadmap-video"
       tabindex="0"

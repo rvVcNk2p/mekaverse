@@ -5,7 +5,7 @@
     :style="{ transform: 'translateY(' + translateY + 'px)' }"
   >
     <video id="hero-video" width="100%" preload>
-      <source src="../assets/videos/hero_mn.mp4" type="video/mp4" />
+      <source src="/hero_mn.mp4" type="video/mp4" />
     </video>
   </div>
 </template>
