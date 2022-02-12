@@ -83,6 +83,7 @@ export default class TimelineStep extends Vue {
       }
 
       p {
+        text-align: left;
         font-size: rem(30);
         color: $global__color--white;
         margin: 0;
