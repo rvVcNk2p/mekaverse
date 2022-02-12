@@ -69,7 +69,7 @@ export default class MekaCarausel extends Vue {
       border-radius: 0;
       height: rem(3);
       opacity: 0.5;
-      background: $global__color--make-blue;
+      background: $global__color--meka-blue;
 
       @media only screen and (max-width: 780px) {
         width: rem(20);
