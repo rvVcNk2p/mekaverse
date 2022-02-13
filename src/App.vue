@@ -3,13 +3,19 @@
     <main>
       <router-view />
     </main>
+    <meka-footer-layout />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import MekaFooterLayout from './partials/MekaFooterLayout.vue';
 
-@Component
+@Component({
+  components: {
+    MekaFooterLayout,
+  },
+})
 /** App Component */
 export default class App extends Vue {
   /** Before create */

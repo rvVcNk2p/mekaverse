@@ -93,7 +93,7 @@ export default class TimelineStep extends Vue {
 
     .meka-roadmap__details__description {
       margin: rem(20) 0 0;
-      color: $global__color--make-blue-secondary;
+      color: $global__color--blue-secondary;
       font-family: inherit;
       line-height: rem(36);
       font-size: rem(18);

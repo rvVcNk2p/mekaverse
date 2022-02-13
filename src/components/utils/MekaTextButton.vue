@@ -1,6 +1,6 @@
 <template>
   <div class="mekaverse-button">
-    <button class="mek">
+    <button class="meka-label">
       {{ text }}
     </button>
   </div>
@@ -30,7 +30,7 @@ export default class MekaTextButton extends Vue {
     font-family: $global__font-family;
 
     &:hover {
-      background-color: #6c77ea;
+      background-color: $global__color--blue-main--light;
     }
   }
 }

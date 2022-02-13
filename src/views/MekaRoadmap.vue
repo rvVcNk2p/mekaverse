@@ -190,7 +190,7 @@ export default class MekaPresentation extends Vue {
     font-size: rem(18);
     font-weight: 400;
     line-height: rem(32);
-    color: $global__color--make-blue-secondary;
+    color: $global__color--blue-secondary;
 
     @media only screen and (max-width: 1200px) {
       width: 85%;

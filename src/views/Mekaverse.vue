@@ -118,7 +118,7 @@ export default class About extends Vue {}
       }
 
       &-container {
-        background: #4753d6;
+        background: $global__color--blue-main;
         padding: rem(25) rem(50);
         transition: all 0.3s ease-in-out;
         color: #fff;
@@ -126,7 +126,7 @@ export default class About extends Vue {}
         font-weight: 700;
 
         &:hover {
-          background: #6c77ea;
+          background: $global__color--blue-main--light;
           color: #fff;
         }
       }
@@ -143,7 +143,7 @@ export default class About extends Vue {}
   padding: 0 rem(60);
 }
 a {
-  color: #4753d6;
+  color: $global__color--blue-main;
   transition: all 0.3s ease-in-out;
   background-color: transparent;
 }
