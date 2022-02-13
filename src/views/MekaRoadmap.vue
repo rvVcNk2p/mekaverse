@@ -1,6 +1,8 @@
 <template>
   <section class="meka-roadmap container">
-    <h2 class="meka-roadmap__title">Roadmap</h2>
+    <h2 class="meka-roadmap__title">
+      {{ $options.filters.capitalize('roadmap') }}
+    </h2>
     <p class="meka-roadmap__description">
       This roadmap outlines our goals and where we want to take MekaVerse. We
       have a lot of ideas and concepts that we are working on. It may evolve
@@ -110,6 +112,13 @@ import TimelineStep from '../components/roadmap/TimelineStep.vue';
 @Component({
   components: {
     TimelineStep,
+  },
+  filters: {
+    capitalize: value => {
+      if (!value) return '';
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    },
   },
 })
 /** MekaPresentation Component */
