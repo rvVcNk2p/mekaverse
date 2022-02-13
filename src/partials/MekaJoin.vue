@@ -33,7 +33,7 @@ export default class MekaJoin extends Vue {}
 <style lang="scss">
 .meka-join-the-community {
   position: relative;
-  background: url('./sky.jpeg') no-repeat;
+  background: url('/sky.jpeg') no-repeat;
   background-size: cover;
   overflow: hidden;
 
