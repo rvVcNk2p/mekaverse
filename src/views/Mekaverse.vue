@@ -57,9 +57,12 @@ export default class About extends Vue {}
 
 <style lang="scss">
 .mekaverse-main {
+  overflow: hidden;
+
   @media only screen and (max-width: 500px) {
     width: 100vw;
   }
+
   &-hero {
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
